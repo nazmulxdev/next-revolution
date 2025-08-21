@@ -4,6 +4,7 @@ import { useState } from "react";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import ThemeToggleButton from "./ThemeToggleButton";
+import { signIn } from "next-auth/react";
 
 const navLinks = [
   { href: "/", label: "Home" },
@@ -36,7 +37,7 @@ export default function Navbar() {
               </Link>
             ))}
             <ThemeToggleButton />
-            <Button>Login</Button>
+            <Button onClick={() => signIn()}>Login</Button>
           </div>
 
           {/* Mobile Hamburger */}
@@ -61,7 +62,14 @@ export default function Navbar() {
                 {link.label}
               </Link>
             ))}
-            <Button onClick={() => setOpen(false)}>Login</Button>
+            <Button
+              onClick={() => {
+                setOpen(false);
+                signIn();
+              }}
+            >
+              Login
+            </Button>
           </div>
         )}
       </div>
