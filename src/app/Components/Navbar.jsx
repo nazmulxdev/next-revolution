@@ -4,7 +4,7 @@ import { useState } from "react";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import ThemeToggleButton from "./ThemeToggleButton";
-import { signIn } from "next-auth/react";
+import { signIn, signOut, useSession } from "next-auth/react";
 
 const navLinks = [
   { href: "/", label: "Home" },
@@ -14,6 +14,9 @@ const navLinks = [
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
+
+  const session = useSession();
+  console.log(session?.data?.user);
 
   return (
     <nav className="w-full border-b bg-background">
@@ -36,7 +39,11 @@ export default function Navbar() {
               </Link>
             ))}
             <ThemeToggleButton />
-            <Button onClick={() => signIn()}>Login</Button>
+            {session?.data?.user ? (
+              <Button onClick={() => signOut()}>Logout</Button>
+            ) : (
+              <Button onClick={() => signIn()}>Login</Button>
+            )}
           </div>
 
           {/* Mobile Hamburger */}
