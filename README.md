@@ -19,12 +19,17 @@ The main objective of this application is to demonstrate a modern web developmen
 
 ### **Key Features**
 
-✅ **Modern Tech Stack:** Built with Next.js 15 for optimal performance and developer experience.
-✅ **Secure Authentication:** Implements social (Google) and credential-based login using NextAuth.js.
-✅ **Protected Routes:** The product management dashboard is only accessible to logged-in users.
-✅ **API Handling:** Uses Next.js Route Handlers to create, fetch, and manage product data.
-✅ **Dynamic Routing:** Individual product details are displayed on dynamically generated pages.
-✅ **Responsive Design:** A clean and fully responsive UI built with Tailwind CSS.
+- ✅ **Modern Tech Stack:** Built with Next.js 15 for optimal performance and developer experience.
+
+- ✅ **Secure Authentication:** Implements social (Google) and credential-based login using NextAuth.js.
+
+- ✅ **Protected Routes:** The product management dashboard is only accessible to logged-in users.
+
+- ✅ **API Handling:** Uses Next.js Route Handlers to create, fetch, and manage product data.
+
+- ✅ **Dynamic Routing:** Individual product details are displayed on dynamically generated pages.
+
+- ✅ **Responsive Design:** A clean and fully responsive UI built with Tailwind CSS.
 
 ---
 
@@ -35,6 +40,7 @@ The main objective of this application is to demonstrate a modern web developmen
   <img src="https://img.shields.io/badge/NextAuth.js-000000?style=for-the-badge&logo=nextauthdotjs&logoColor=white" alt="NextAuth.js" />
   <img src="https://img.shields.io/badge/React-61DAFB?style=for-the-badge&logo=react&logoColor=black" alt="React" />
   <img src="https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white" alt="Tailwind CSS" />
+  <img src="https://img.shields.io/badge/ShadCn-000000?style=for-the-badge&logo=ShadCn&logoColor=white" alt="ShadCn" />
   <img src="https://img.shields.io/badge/Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white" alt="Vercel" />
 </p>
 
@@ -48,7 +54,7 @@ The main objective of this application is to demonstrate a modern web developmen
 | `/login` | **Login Page:** Allows users to log in via credentials or social providers. | Public |
 | `/products` | **Product List Page:** Shows a list of all available products. | Public |
 | `/products/[id]` | **Product Details Page:** Shows the full details of a single product. | Public |
-| `/dashboard/add-product`| **Add Product Page:** A form to add new products to the database. | **Protected** |
+| `/products/add-product`| **Add Product Page:** A form to add new products to the database. | **Protected** |
 
 ---
 
