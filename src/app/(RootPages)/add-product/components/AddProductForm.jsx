@@ -17,7 +17,6 @@ export default function AddProductForm() {
       price: formData.get("price"),
       imageUrl: formData.get("imageUrl"),
     };
-    console.log("Product Submitted:", productData);
     try {
       const response = await fetch("/api/products", {
         method: "POST",

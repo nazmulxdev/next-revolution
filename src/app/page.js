@@ -1,5 +1,8 @@
 import FeatureProducts from "./Components/FeatureProducts";
 import Hero from "./Components/Hero";
+export const metadata = {
+  title: "Revolution | Home",
+};
 
 export default function Home() {
   return (

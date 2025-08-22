@@ -4,7 +4,7 @@ export const authOptions = {
   providers: [
     GoogleProvider({
       clientId: process.env.GOOGLE_CLIENT_ID,
-      clientSecret: process.env.GOOGLE_PROVIDER,
+      clientSecret: process.env.GOOGLE_CLIENT_SECRET,
     }),
   ],
 
@@ -17,9 +17,6 @@ export const authOptions = {
     },
     async session({ session, token, user }) {
       return session;
-    },
-    async jwt({ token, user, account, profile, isNewUser }) {
-      return token;
     },
   },
 };

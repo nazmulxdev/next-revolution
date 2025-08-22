@@ -8,7 +8,7 @@ const FeatureProducts = async () => {
     ...product,
     _id: product?._id.toString(),
   }));
-  console.log(featureProducts);
+  
   return (
     <div className="max-w-screen-2xl mx-auto">
       <ProductCards featureProducts={featureProducts}></ProductCards>

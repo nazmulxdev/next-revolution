@@ -6,7 +6,6 @@ import IdNotFound from "./not-found";
 const SingleProduct = async ({ params }) => {
   const { id } = await params;
   const product = await getSingleProduct(id);
-  console.log(product);
   if (!product) {
     return <IdNotFound></IdNotFound>;
   }

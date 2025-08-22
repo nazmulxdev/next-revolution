@@ -8,10 +8,9 @@ export async function POST(req) {
     const result = await db.collection("products").insertOne(productData);
     return new Response(JSON.stringify(result), { status: 201 });
   } catch (error) {
-    console.log(error);
     return new Response(
       JSON.stringify({
-        error: "Failed to add product details in the database.",
+        error: `Failed to add product details in the database.${error}`,
       }),
       { status: 500 },
     );

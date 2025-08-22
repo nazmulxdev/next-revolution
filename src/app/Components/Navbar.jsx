@@ -16,8 +16,6 @@ export default function Navbar() {
   const [open, setOpen] = useState(false);
 
   const session = useSession();
-  console.log(session?.data?.user);
-
   return (
     <nav className="w-full border-b bg-background">
       <div className="mx-auto">

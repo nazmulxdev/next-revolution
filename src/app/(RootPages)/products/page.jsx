@@ -3,14 +3,16 @@ import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import React from "react";
 
+export const metadata = {
+  title: "Revolution | Products",
+};
+
 const Products = async () => {
   let products = await getProducts();
   products = products.map((product) => ({
     ...product,
     _id: product?._id.toString(),
   }));
-  console.log(products);
-
   return (
     <div className="max-w-screen-2xl min-h-screen mx-auto">
       <p className="font-bold text-4xl text-center my-4">Our All Products.</p>
