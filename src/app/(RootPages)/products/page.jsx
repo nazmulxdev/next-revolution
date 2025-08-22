@@ -14,7 +14,7 @@ const Products = async () => {
   return (
     <div className="max-w-screen-2xl min-h-screen mx-auto">
       <p className="font-bold text-4xl text-center my-4">Our All Products.</p>
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 justify-center items-center m-2">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 justify-center m-2">
         {products.map((product) => (
           <div
             key={product._id}

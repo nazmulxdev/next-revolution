@@ -3,8 +3,10 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
+import { useRouter } from "next/navigation";
 import Swal from "sweetalert2";
 export default function AddProductForm() {
+  const router = useRouter();
   const handleSubmit = async (e) => {
     e.preventDefault();
     const form = e.currentTarget;
@@ -32,11 +34,14 @@ export default function AddProductForm() {
         });
       } else {
         form.reset();
-        return Swal.fire({
+
+        Swal.fire({
           title: "Successful",
           text: "Product details added in the database successfully.",
           icon: "success",
           draggable: true,
+        }).then(() => {
+          router.push("/products");
         });
       }
     } catch (error) {
@@ -89,7 +94,7 @@ export default function AddProductForm() {
         </div>
         {/* product image */}
         <div>
-          <Label htmlFor="name">Product Image URL</Label>
+          <Label htmlFor="image">Product Image URL</Label>
           <Input
             id="image"
             name="imageUrl"
