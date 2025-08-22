@@ -24,7 +24,7 @@ export default function RootLayout({ children }) {
     <html lang="en" suppressHydrationWarning>
       <NextAuthSessionProvider>
         <body
-          className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+          className={`${geistSans.variable} ${geistMono.variable} antialiased min-h-screen`}
         >
           <ThemeProvider
             attribute="class"
@@ -32,9 +32,11 @@ export default function RootLayout({ children }) {
             enableSystem
             disableTransitionOnChange
           >
-            <Navbar />
-            {children}
-            <Footer />
+            <div className="flex flex-col min-h-screen">
+              <Navbar />
+              {children}
+              <Footer />
+            </div>
           </ThemeProvider>
         </body>
       </NextAuthSessionProvider>
