@@ -8,9 +8,8 @@ import { signIn } from "next-auth/react";
 
 const navLinks = [
   { href: "/", label: "Home" },
-  { href: "/about", label: "About" },
-  { href: "/services", label: "Services" },
-  { href: "/contact", label: "Contact" },
+  { href: "/products", label: "Products" },
+  { href: "/add-product", label: "Add Products" },
 ];
 
 export default function Navbar() {
