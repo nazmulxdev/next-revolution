@@ -1,34 +1,29 @@
 import { Button } from "@/components/ui/button";
-import { Frown } from "lucide-react";
+import { Ghost } from "lucide-react";
 import Link from "next/link";
 import React from "react";
 
-const NotFoundPage = () => {
+const IdNotFound = () => {
   return (
     <div className="flex flex-col items-center justify-center min-h-screen px-6 text-center">
-      {/* Icon */}
       <div className="bg-muted rounded-full p-6 mb-6">
-        <Frown className="w-16 h-16 text-muted-foreground" />
+        <Ghost className="w-16 h-16 text-muted-foreground" />
       </div>
 
-      {/* Heading */}
       <h1 className="text-4xl font-bold tracking-tight mb-2">
-        404 - Page Not Found
+        Product Not Found
       </h1>
-
-      {/* Subtext */}
       <p className="text-lg text-muted-foreground max-w-md mb-6">
-        Oops! The page you’re looking for doesn’t exist or has been moved.
+        The product you’re looking for doesn’t exist or may have been removed.
       </p>
 
-      {/* Action */}
-      <Link href="/" passHref>
+      <Link href="/products" passHref>
         <Button size="lg" className="rounded-full shadow-md">
-          Go Back Home
+          Back to Products
         </Button>
       </Link>
     </div>
   );
 };
 
-export default NotFoundPage;
+export default IdNotFound;

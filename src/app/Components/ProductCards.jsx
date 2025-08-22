@@ -1,6 +1,5 @@
 "use client";
 import { Button } from "@/components/ui/button";
-import Image from "next/image";
 import Link from "next/link";
 
 export default function ProductCards({ featureProducts }) {
@@ -12,12 +11,10 @@ export default function ProductCards({ featureProducts }) {
           className="rounded-2xl shadow-md overflow-hidden border bg-card text-card-foreground"
         >
           <div className="relative h-48 w-full">
-            <Image
+            <img
               src={product.imageUrl}
               alt={product.name}
-              fill
-              sizes="(max-width: 768px) 100vw, 50vw"
-              className="object-cover"
+              className="w-full h-full object-cover rounded-l-2xl"
             />
           </div>
           <div className="p-4">
